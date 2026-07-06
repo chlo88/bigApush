@@ -133,6 +133,12 @@ python main.py web
 └── .github/workflows/   # GitHub Actions配置
 ```
 
+## 参考项目
+
+本项目基于以下开源项目开发：
+
+- [KHunter](https://github.com/ling-0729/KHunter) - A股量化交易系统，提供选股策略和数据分析框架
+
 ## 免责声明
 
 本工具仅用于学习和研究，不构成任何投资建议。股市有风险，投资需谨慎。
