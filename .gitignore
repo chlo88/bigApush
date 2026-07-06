@@ -1,31 +1,25 @@
+# 数据库文件
+data/*.db
+data/*.db-shm
+data/*.db-wal
+data/running/
+
+# 日志
+logs/
+
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
-*.egg-info/
-dist/
-build/
-.eggs/
-
-# Virtual Environment
-venv/
 .venv/
-env/
+venv/
 
-# IDE
-.vscode/
-.idea/
-
-# Logs
-logs/*.log
-
-# OS
+# 临时文件
+test_*.py
+*.tmp
 .DS_Store
 Thumbs.db
 
-# Reports
-reports/
-
-# Env files
+# 环境配置
 .env
-.env.local
+config/config.yaml
