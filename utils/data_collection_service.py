@@ -498,7 +498,7 @@ class DataCollectionService:
                         None,
                         progress_callback=init_progress_cb
                     )
-                    data_initializer.init_full_data(years=3, stock_dict=stock_dict)
+                    data_initializer.init_full_data(years=1, stock_dict=stock_dict)
 
                     self.init_status['progress'] = 100
                     self._add_init_log("✓ 数据初始化完成")
@@ -768,7 +768,7 @@ class DataCollectionService:
                 )
                 
                 # 执行新股票检测和初始化
-                new_stock_result = detector.detect_and_init_new_stocks(years=3, days=30)
+                new_stock_result = detector.detect_and_init_new_stocks(years=1, days=30)
                 
                 # 更新统计信息
                 with self.update_lock:
