@@ -15,7 +15,7 @@ jobs:
   evening-selection:
     if: github.event.schedule == '10 7 * * 1-5' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -40,12 +40,12 @@ jobs:
       - name: Initialize data (first run)
         if: steps.check-db.outputs.exists == 'false'
         run: python main.py init
-        timeout-minutes: 20
+        timeout-minutes: 45
       - name: Run selection and push
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
         run: python main.py run
-        timeout-minutes: 10
+        timeout-minutes: 30
 
   # 任务2：每天早上8点早间新闻
   morning-news:
